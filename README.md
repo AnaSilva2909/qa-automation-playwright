@@ -2,147 +2,144 @@
 
 **Automação de testes web com Playwright e JavaScript**
 
-Projeto de estudos práticos em Quality Assurance (QA), com foco na criação de testes automatizados confiáveis, organizados e de fácil manutenção.
+Projeto de estudos práticos em Quality Assurance (QA), com foco em automação de testes, boas práticas de desenvolvimento, validação de funcionalidades e melhoria contínua.
 
----
+## 🎯 Objetivos
 
-## 🎯 Objetivos do projeto
-
-- Desenvolver e manter testes automatizados para aplicações web.
-- Validar funcionalidades, regras de negócio e fluxos críticos.
+- Automatizar testes funcionais e de regressão.
+- Validar regras de negócio e fluxos críticos.
 - Aplicar boas práticas de organização e reutilização de código.
-- Investigar falhas e produzir evidências de execução.
-- Evoluir o projeto gradualmente com ferramentas e práticas de QA.
+- Investigar falhas e documentar evidências.
+- Evoluir o projeto com ferramentas de automação e integração contínua.
 
 ## 🛠️ Tecnologias e ferramentas
 
-Este projeto utiliza tecnologias voltadas à automação de testes web, desenvolvimento JavaScript e controle de versão. Cada ferramenta possui uma função específica no processo de criação, execução e manutenção dos testes automatizados.
-
-| Tecnologia | O que é? | Para que serve no projeto? |
+| Tecnologia | O que é | Para que serve |
 |---|---|---|
-| **Playwright** | Framework de automação de testes desenvolvido pela Microsoft. | Automatizar testes em aplicações web, interagir com elementos da página, validar comportamentos e verificar resultados esperados. |
-| **JavaScript** | Linguagem de programação utilizada no desenvolvimento web. | Escrever os cenários automatizados, criar funções, manipular dados e implementar as validações dos testes. |
-| **Node.js** | Ambiente de execução JavaScript fora do navegador. | Permitir que os testes e as ferramentas do projeto sejam executados no computador. |
-| **NPM** | Gerenciador de pacotes que acompanha a instalação padrão do Node.js. | Instalar, gerenciar e atualizar as dependências do projeto, além de executar comandos definidos no `package.json`. |
-| **Git** | Sistema de controle de versão distribuído. | Registrar alterações no código, criar commits, comparar versões e facilitar a manutenção do projeto. |
-| **GitHub** | Plataforma de hospedagem de repositórios Git. | Armazenar o projeto remotamente, manter seu histórico e compartilhar o portfólio. |
-| **GitHub Actions** | Serviço de automação integrado ao GitHub. | Executar testes automaticamente em fluxos de integração contínua (CI), por exemplo, após um push ou na abertura de um pull request. |
+| **Playwright** | Framework de automação de testes. | Interagir com aplicações web e validar comportamentos esperados. |
+| **JavaScript** | Linguagem de programação. | Desenvolver os cenários e as validações dos testes. |
+| **Node.js** | Ambiente de execução JavaScript. | Executar código JavaScript fora do navegador. |
+| **NPM** | Gerenciador de pacotes do Node.js. | Gerenciar dependências e executar scripts do projeto. |
+| **Git** | Sistema de controle de versão. | Registrar alterações e manter o histórico do código. |
+| **GitHub** | Plataforma de hospedagem de repositórios Git. | Armazenar e compartilhar o projeto. |
+| **GitHub Actions** | Serviço de automação do GitHub. | Executar testes automaticamente em pipelines de integração contínua (CI). |
 
 ### 🔄 Como as tecnologias trabalham juntas?
 
-1. **JavaScript** é utilizado para escrever os testes.
-2. **Node.js** permite executar o código JavaScript no ambiente do projeto.
-3. **NPM** gerencia as dependências e os comandos necessários para executar os testes.
-4. **Playwright** fornece os recursos para interagir com a aplicação web e validar seus comportamentos.
-5. **Git** registra as alterações realizadas no código.
-6. **GitHub** mantém o repositório remoto e o histórico do projeto.
-7. **GitHub Actions** poderá executar os testes automaticamente, conforme a evolução do projeto.
+1. **JavaScript:** utilizado para escrever os testes.
+2. **Node.js:** permite executar o código JavaScript.
+3. **NPM:** gerencia as dependências e os comandos do projeto.
+4. **Playwright:** automatiza as interações e validações no navegador.
+5. **Git:** registra as alterações realizadas.
+6. **GitHub:** armazena o repositório remoto.
+7. **GitHub Actions:** poderá executar os testes automaticamente.
 
 ---
 
-## 💻 Instalação e configuração do ambiente
+## 💻 Instalação e configuração
 
-Este guia apresenta as etapas para preparar o ambiente de desenvolvimento no Windows, utilizando o Visual Studio Code.
+Instruções para configurar o ambiente no Windows utilizando o Visual Studio Code (VS Code).
 
-### 1. Instalar o Node.js e o NPM
+### 1. Instalar Node.js e NPM
 
-O Node.js é necessário para executar os testes, enquanto o NPM é utilizado para gerenciar as dependências do projeto.
+O Node.js permite executar o projeto JavaScript. O NPM é instalado junto com ele e gerencia os pacotes utilizados.
 
-1. Acesse o site oficial: [Node.js](https://nodejs.org/).
-2. Baixe a versão **LTS (Long Term Support)**, recomendada para a maioria dos projetos.
-3. Execute o instalador e mantenha as opções padrão, garantindo que o Node.js e o NPM sejam instalados.
-4. Após a instalação, feche e abra novamente o VS Code para atualizar o ambiente.
+1. Acesse [nodejs.org](https://nodejs.org/).
+2. Baixe a versão **LTS (Long Term Support)**.
+3. Execute o instalador com as opções padrão.
+4. Reinicie o VS Code após a instalação, se necessário.
 
-#### Validar a instalação
+**Validar a instalação**
 
-No VS Code, abra **Terminal → New Terminal** e execute os comandos:
+No VS Code, abra **Terminal → New Terminal** e execute:
 
 ```bash
 node -v
 npm -v
 ```
 
-Os comandos devem apresentar os números das versões instaladas. Não é necessário que os números sejam iguais aos exemplos encontrados em tutoriais.
+Os comandos devem exibir as versões instaladas.
 
-### 2. Preparar o projeto
+### 2. Inicializar o projeto NPM
 
-Abra no VS Code a pasta em que o projeto de automação será desenvolvido.
-
-No terminal integrado, execute:
+Na pasta do projeto, execute:
 
 ```bash
-npm init playwright@latest
+npm init -y
 ```
 
-Esse comando inicia o assistente de configuração do Playwright para um novo projeto.
+**O que esse comando faz?**
 
-Durante a configuração, selecione:
+- `npm init`: inicializa um projeto gerenciado pelo NPM.
+- `-y`: aceita as configurações padrão sem fazer perguntas.
+- `package.json`: arquivo criado para registrar informações do projeto, dependências e scripts.
 
-- **Language:** JavaScript.
-- **Tests folder:** `tests`, ou o nome desejado para a pasta dos testes.
-- **Add a GitHub Actions workflow:** escolha conforme o momento do projeto; a configuração de CI pode ser feita posteriormente.
-- **Install Playwright browsers:** confirme a instalação dos navegadores quando solicitado.
+O comando `npm init -y` **não instala o Playwright**. Ele prepara a estrutura básica para gerenciar o projeto.
 
-O assistente poderá criar arquivos como `package.json`, `playwright.config.js` e a pasta de testes, conforme as opções selecionadas.
+> Se o projeto já tiver um `package.json`, não execute esse comando novamente sem necessidade.
 
-**Importante:** se o projeto do curso já tiver um `package.json` e estiver configurado, não execute novamente a inicialização por cima dele. Nesse caso, siga as instruções do curso e instale as dependências existentes com `npm install`.
+### 3. Instalar o Playwright
 
-### 3. Instalar os navegadores do Playwright
+Para instalar o Playwright Test manualmente, execute:
 
-Caso não tenham sido instalados durante a configuração, execute:
+```bash
+npm install -D @playwright/test
+```
+
+- `npm install`: instala um pacote.
+- `-D`: registra o pacote como dependência de desenvolvimento.
+- `@playwright/test`: disponibiliza o framework de testes do Playwright.
+
+**Instalar os navegadores:**
 
 ```bash
 npx playwright install
 ```
 
-Esse comando baixa os navegadores necessários para executar os testes com o Playwright.
+Esse comando baixa os navegadores necessários para executar os testes.
+
+**Alternativa:** para iniciar um projeto novo com a configuração guiada do Playwright, utilize:
+
+```bash
+npm init playwright@latest
+```
+
+Esse assistente configura o projeto e pode criar os arquivos iniciais, os testes de exemplo e a configuração do Playwright. Utilize apenas um método de inicialização para o mesmo projeto.
 
 ### 4. Executar os testes
 
-Para executar a suíte de testes, utilize:
+**Executar os testes automatizados:**
 
 ```bash
 npx playwright test
 ```
 
-Para abrir a interface interativa de execução e depuração:
+**Abrir a interface interativa:**
 
 ```bash
 npx playwright test --ui
 ```
 
-Para visualizar o relatório HTML após uma execução:
+**Abrir o relatório HTML:**
 
 ```bash
 npx playwright show-report
 ```
 
-O relatório estará disponível se tiver sido gerado pela execução anterior.
+O relatório estará disponível se tiver sido gerado pela execução dos testes.
 
 ### 5. Versionar o projeto no GitHub
 
-Depois de configurar o ambiente e executar os primeiros testes:
-
 1. Salve os arquivos no VS Code.
-2. Acesse **Controle do Código-Fonte**.
-3. Prepare os arquivos que deseja registrar.
-4. Escreva uma mensagem descritiva para o commit.
-5. Clique em **Commit** e depois em **Sync Changes** ou **Push** para enviar as alterações ao GitHub.
+2. Abra **Controle do Código-Fonte**.
+3. Prepare os arquivos que deseja incluir no commit.
+4. Escreva uma mensagem descritiva, por exemplo: `Adiciona testes iniciais com Playwright`.
+5. Clique em **Commit**.
+6. Use **Sync Changes** ou **Push** para enviar as alterações ao GitHub.
 
-Não publique senhas, tokens, arquivos `.env` ou informações confidenciais.
+**Segurança:** não publique senhas, tokens, arquivos `.env` ou informações confidenciais.
 
 ---
-
-## 📈 Próximas etapas
-
-- [ ] Configurar e validar o ambiente de desenvolvimento.
-- [ ] Criar e executar os primeiros testes automatizados.
-- [ ] Praticar seletores, assertions e validações.
-- [ ] Organizar os testes e aplicar o padrão Page Object Model.
-- [ ] Configurar relatórios e evidências de execução.
-- [ ] Implementar integração contínua com GitHub Actions.
-
-**Status:** projeto de estudos em desenvolvimento contínuo.
 
 ## 🧪 Estratégia de testes
 
@@ -156,7 +153,7 @@ O projeto será desenvolvido progressivamente, contemplando:
 
 ## 📂 Estrutura do projeto
 
-A estrutura será atualizada conforme a evolução da automação.
+A estrutura abaixo é ilustrativa e será ajustada conforme a evolução do projeto.
 
 ```text
 qa-automation-playwright/
@@ -167,13 +164,13 @@ qa-automation-playwright/
 └── README.md              # Documentação do projeto
 ```
 
-
 ## 📈 Evolução do projeto
 
-- [x] Criação do repositório e controle de versão.
-- [ ] Configuração inicial do Playwright.
-- [ ] Implementação dos primeiros cenários automatizados.
-- [ ] Organização e reutilização de código.
+- [x] Criação do repositório no GitHub.
+- [x] Documentação inicial do projeto.
+- [ ] Configuração do ambiente Playwright.
+- [ ] Implementação dos primeiros cenários.
+- [ ] Aplicação do padrão Page Object Model.
 - [ ] Configuração de relatórios e evidências.
 - [ ] Integração contínua com GitHub Actions.
 
@@ -181,8 +178,4 @@ qa-automation-playwright/
 
 Este repositório faz parte da minha evolução profissional em Quality Assurance, com foco em automação de testes, qualidade de software e melhoria contínua.
 
-O desenvolvimento é incremental, priorizando código legível, testes confiáveis e documentação clara.
-
----
-
-**Projeto de estudos em constante evolução.** 🚀
+**Status:** projeto de estudos em desenvolvimento contínuo. 🚀

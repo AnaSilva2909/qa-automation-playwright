@@ -168,7 +168,7 @@ qa-automation-playwright/
 
 - [x] Criação do repositório no GitHub.
 - [x] Documentação inicial do projeto.
-- [ ] Configuração do ambiente Playwright.
+- [x] Configuração do ambiente Playwright.
 - [ ] Implementação dos primeiros cenários.
 - [ ] Aplicação do padrão Page Object Model.
 - [ ] Configuração de relatórios e evidências.

@@ -167,17 +167,6 @@ qa-automation-playwright/
 └── README.md              # Documentação do projeto
 ```
 
-## ▶️ Como executar os testes
-
-Após configurar o ambiente e instalar as dependências:
-
-```bash
-npm install
-npx playwright install
-npx playwright test
-```
-
-Os comandos poderão variar conforme a configuração e os scripts definidos no projeto.
 
 ## 📈 Evolução do projeto
 

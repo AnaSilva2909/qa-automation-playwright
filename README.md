@@ -4,8 +4,6 @@
 
 Projeto de estudos práticos em Quality Assurance (QA), com foco na criação de testes automatizados confiáveis, organizados e de fácil manutenção.
 
-O objetivo é desenvolver habilidades em automação de testes, boas práticas de programação e integração contínua, construindo um portfólio técnico alinhado aos desafios reais da área de qualidade de software.
-
 ---
 
 ## 🎯 Objetivos do projeto
@@ -49,8 +47,6 @@ qa-automation-playwright/
 ├── .gitignore             # Arquivos ignorados pelo Git
 └── README.md              # Documentação do projeto
 ```
-
-*Nota: a estrutura acima é ilustrativa e deve refletir os arquivos reais do repositório.*
 
 ## ▶️ Como executar os testes
 

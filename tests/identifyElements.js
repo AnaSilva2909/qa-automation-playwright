@@ -8,8 +8,8 @@ const senha = "Bank@123";
 
 (async () => {
 
-    // Abre o navegador visivelmente na tela.
-    const browser = await chromium.launch({ headless: false });
+    // Abre o navegador visivelmente na tela. SlowMo: Para atrasar um pouco o teste
+    const browser = await chromium.launch({ headless: false, slowMo: 50});
     // Cria uma sessão isolada do navegador.
     const context = await browser.newContext();
     // Cria uma página dentro da sessão.

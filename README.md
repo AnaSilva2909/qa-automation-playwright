@@ -540,7 +540,7 @@ Essa estrutura é uma sugestão. Se você ainda não tiver a pasta `scripts`, n�
 - [x] Criação do repositório no GitHub.
 - [x] Documentação inicial do projeto.
 - [x] Configuração inicial do ambiente.
-- [ ] Implementação dos primeiros cenários estruturados.
+- [x] Implementação dos primeiros cenários estruturados.
 - [ ] Aplicação do padrão Page Object Model.
 - [ ] Configuração de relatórios e evidências.
 - [ ] Integração contínua com GitHub Actions.
